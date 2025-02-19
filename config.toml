@@ -2,7 +2,7 @@ baseURL = "http://localhost:1313/"
 languageCode = "en-GB"
 title = "ArchLinux Personal Config & Documentation"
 theme = "lotusdocs"
-# themesDir = "themes"
+themesDir = "docs/themes"
 
 contentDir = "content"
 enableEmoji = true
