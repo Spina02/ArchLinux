@@ -100,7 +100,7 @@ canonifyURLs = true
         indexName = "dev_lotusdocs.dev"                # Index Name to perform search on (or set env variable HUGO_PARAM_DOCSEARCH_indexName)
 
     [params.feedback]
-        enabled = true
+        enabled = false
         emoticonTpl = true
         eventDest = ["plausible","google"]
         emoticonEventName = "Feedback"
@@ -111,17 +111,17 @@ canonifyURLs = true
         successMsg = "Thank you for helping to this documentation!"
         errorMsg = "Sorry! There was an error while attempting to submit your feedback!"
         positiveForm = [
-          ["Accurate", "Accurately describes the feature or option."],
-          ["Solved my problem", "Helped me resolve an issue."],
-          ["Easy to understand", "Easy to follow and comprehend."],
-          ["Something else"]
+            ["Accurate", "Accurately describes the feature or option."],
+            ["Solved my problem", "Helped me resolve an issue."],
+            ["Easy to understand", "Easy to follow and comprehend."],
+            ["Something else"]
         ]
         negativeForm = [
-          ["Inaccurate", "Doesn't accurately describe the feature or option."],
-          ["Couldn't find what I was looking for", "Missing important information."],
-          ["Hard to understand", "Too complicated or unclear."],
-          ["Code sample errors", "One or more code samples are incorrect."],
-          ["Something else"]
+            ["Inaccurate", "Doesn't accurately describe the feature or option."],
+            ["Couldn't find what I was looking for", "Missing important information."],
+            ["Hard to understand", "Too complicated or unclear."],
+            ["Code sample errors", "One or more code samples are incorrect."],
+            ["Something else"]
         ]
 
 [[menu.primary]]
