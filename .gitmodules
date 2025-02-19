@@ -1,3 +1,6 @@
 [submodule "docs/themes/lotusdocs"]
 	path = docs/themes/lotusdocs
 	url = https://github.com/colinwilson/lotusdocs.git
+[submodule "docs/themes/hugo-mod-bootstrap-scss/v5"]
+	path = docs/themes/hugo-mod-bootstrap-scss/v5
+	url = https://github.com/gohugoio/hugo-mod-bootstrap-scss.git
