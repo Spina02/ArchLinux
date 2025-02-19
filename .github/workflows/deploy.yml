@@ -3,7 +3,7 @@ name: Deploy Hugo site to GitHub Pages
 on:
     push:
         branches:
-            - main  # Adjust if your source branch is different
+            - gh-pages
 
 jobs:
     build:
@@ -18,7 +18,7 @@ jobs:
           - name: Setup Hugo
             uses: peaceiris/actions-hugo@v2
             with:
-                hugo-version: '0.144.1'  # Use your installed Hugo version
+                hugo-version: '0.144.1'
         
           - name: Build site
             run: hugo -D
