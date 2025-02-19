@@ -1,26 +1,39 @@
-# Archlinux Installation Roadmap
-
-This document outlines the steps I followed to install and configure Arch Linux with Hyprland on my Asus A15 FA507NV. It is intended both as a personal reference and as a guide for anyone wishing to reproduce the setup.
-
-### Computer Specs
-
-| Component     | Specification                            |
-|---------------|------------------------------------------|
-| Processor     | Ryzen 7 7735HS with iGPU                 |
-| Graphics Card | RTX 4060 8GB DDR6                        |
-| Memory        | 16GB DDR5 4800MHz                        |
-| Storage (1)   | native SSD NVMe 500GB (for Windows)      |
-| Storage (2)   | SSD NVMe Samsung 990 Pro 1TB (for Linux) |
-
----
++++
+type = "docs"
+weight = 100
+title = "Archlinux Installation"
+author = "Andrea Spinelli"
+icon = "settings"
+descriptiuon = "A comprehensive guide detailing the steps ftor installing Arch Linuhx. This document covers everything ofrom preparation and partitioning to system configuration till basic post-installration tasks."
+date = "2025-02-19T12:00:00+00:00"
+BuildDate = "2025-02-19T12:00:00+00:00"
+draft = false
+toc = true
+tags = ["Arch Linux", "Installation", "Guide"]
++++
 
 ## Index
 
   - [Installation Roadmap](#installation-roadmap)
-    - [Pre-Installation](#pre-installation)
-    - [Installation](#installation)
-    - [System Configuration](#system-configuration)
-    - [Reboot and Post Installation](#reboot-and-post-installation)
+      - [Pre-Installation](#pre-installation)
+          - [Preparation & Research](#preparation--research)
+          - [Create Bootable Media](#create-bootable-media)
+          - [BIOS/UEFI Configuration](#biosuefi-configuration)
+      - [Installation](#installation)
+          - [Boot into the Arch Linux Live Environment](#boot-into-the-arch-linux-live-environment)
+          - [Set Up the Keyboard Layout](#set-up-the-keyboard-layout)
+          - [Connect to the Internet](#connect-to-the-internet)
+          - [Update the System Clock](#update-the-system-clock)
+          - [Partition the Disk](#partition-the-disk)
+          - [Format the Partitions](#format-the-partitions)
+      - [System Configuration](#system-configuration)
+          - [Generate Filesystem Table](#generate-the-filesystem-table-fstab)
+          - [Chroot into New System](#chroot-into-the-new-system)
+          - [Time Zone and Localization](#time-zone-and-localization)
+          - [Network Configuration](#network-configuration)
+          - [Root Password and User Creation](#root-password-and-user-creation)
+          - [Bootloader Installation](#bootloader-installation)
+      - [Reboot and Post Installation](#reboot-and-post-installation)
 
 ---
 
@@ -382,6 +395,10 @@ Always consult the [Arch Wiki Installation Guide](https://wiki.archlinux.org/tit
 
 ### Set up GPU drivers
 
+TODO
+
+---
+
  **Documentation and Backup**
    - Save this markdown file in your repository.
    - Consider versioning your configuration files (using Git, for example) for future reference and reproducibility.
@@ -391,9 +408,3 @@ Always consult the [Arch Wiki Installation Guide](https://wiki.archlinux.org/tit
    - Install Xorg or Wayland dependencies as required by Hyprland.
    - Follow the [Hyprland installation guide](https://wiki.archlinux.org/title/Hyprland) for window manager-specific configurations.
    - Install and configure any additional applications (e.g., terminal emulator, compositor settings, etc.).
-
-### TODO
-
-[] configure kitty
-[] 
-[] configure htop
