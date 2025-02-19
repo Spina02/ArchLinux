@@ -2,6 +2,7 @@ baseURL = "https://Spina02.github.io/ArchLinux/"
 #baseURL = "http://localhost:1313"
 languageCode = "en-GB"
 title = "ArchLinux Personal Config & Documentation"
+theme = "lotusdocs"
 
 contentDir = "content"
 enableEmoji = true

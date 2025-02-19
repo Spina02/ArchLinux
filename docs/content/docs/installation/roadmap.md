@@ -1,6 +1,6 @@
 ---
 type: "docs"
-weight: 200
+weight: 100
 title: "Roadmap"
 icon: "list"
 description: "The installation roadmap"
