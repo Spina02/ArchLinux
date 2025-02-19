@@ -2,7 +2,7 @@ baseURL = "https://spina02.github.io/ArchLinux/" # hugo server -D --baseURL http
 languageCode = "en-GB"
 title = "ArchLinux Personal Config & Documentation"
 theme = "lotusdocs"
-themesDir = "themes"
+# themesDir = "themes"
 
 contentDir = "content"
 enableEmoji = true
