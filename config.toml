@@ -1,4 +1,4 @@
-baseURL = "https://spina02.github.io/ArchLinux/" # hugo server -D --baseURL http://localhost:1313/
+baseURL = "http://localhost:1313/"
 languageCode = "en-GB"
 title = "ArchLinux Personal Config & Documentation"
 theme = "lotusdocs"
@@ -21,9 +21,9 @@ canonifyURLs = true
     [[module.imports]]
         path = "github.com/colinwilson/lotusdocs"
         disable = false
-    [[module.imports]]
-        path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
-        disable = false
+    # [[module.imports]]
+    #     path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
+    #     disable = false
 
 [markup]
     [markup.tableOfContents]
