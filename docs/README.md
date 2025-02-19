@@ -17,10 +17,25 @@ This document outlines the steps I followed to install and configure Arch Linux 
 ## Index
 
   - [Installation Roadmap](#installation-roadmap)
-    - [Pre-Installation](#pre-installation)
-    - [Installation](#installation)
-    - [System Configuration](#system-configuration)
-    - [Reboot and Post Installation](#reboot-and-post-installation)
+      - [Pre-Installation](#pre-installation)
+          - [Preparation & Research](#preparation--research)
+          - [Create Bootable Media](#create-bootable-media)
+          - [BIOS/UEFI Configuration](#biosuefi-configuration)
+      - [Installation](#installation)
+          - [Boot into the Arch Linux Live Environment](#boot-into-the-arch-linux-live-environment)
+          - [Set Up the Keyboard Layout](#set-up-the-keyboard-layout)
+          - [Connect to the Internet](#connect-to-the-internet)
+          - [Update the System Clock](#update-the-system-clock)
+          - [Partition the Disk](#partition-the-disk)
+          - [Format the Partitions](#format-the-partitions)
+      - [System Configuration](#system-configuration)
+          - [Generate Filesystem Table](#generate-the-filesystem-table-fstab)
+          - [Chroot into New System](#chroot-into-the-new-system)
+          - [Time Zone and Localization](#time-zone-and-localization)
+          - [Network Configuration](#network-configuration)
+          - [Root Password and User Creation](#root-password-and-user-creation)
+          - [Bootloader Installation](#bootloader-installation)
+      - [Reboot and Post Installation](#reboot-and-post-installation)
 
 ---
 
@@ -40,7 +55,7 @@ Always consult the [Arch Wiki Installation Guide](https://wiki.archlinux.org/tit
 
    Use tools such as [Balena Etcher](https://etcher.balena.io/), [Ventoy](https://www.ventoy.net/en/index.html), or, if you prefer the command line, the `dd` utility to write the ISO to a USB drive.
   
-   > [!NOTE] Verify Download Integrity (Optional)
+> [!NOTE] Verify Download Integrity (Optional)
    > Download checksum file from [this page](https://archlinux.org/download/#checksums) and use [gpg](https://wiki.archlinux.org/title/GnuPG#Verify_a_signature) to verify the signature.
    > ```bash
    > gpg --keyserver-options auto-key-retrieve --verify archlinux-version-x86_64.iso.sig
