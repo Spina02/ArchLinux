@@ -1,8 +1,8 @@
-baseURL = "https://Spina02.github.io/ArchLinux/"
-#baseURL = "http://localhost:1313"
+baseURL = "https://spina02.github.io/ArchLinux/" # hugo server -D --baseURL http://localhost:1313/
 languageCode = "en-GB"
 title = "ArchLinux Personal Config & Documentation"
 theme = "lotusdocs"
+themesDir = "themes"
 
 contentDir = "content"
 enableEmoji = true
