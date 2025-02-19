@@ -1,5 +1,5 @@
-# baseURL = "https://Spina02.github.io/ArchLinux/"
-baseURL = "http://localhost:1313"
+baseURL = "https://Spina02.github.io/ArchLinux/"
+#baseURL = "http://localhost:1313"
 languageCode = "en-GB"
 title = "ArchLinux Personal Config & Documentation"
 
