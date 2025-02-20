@@ -9,7 +9,7 @@ enableEmoji = true
 enableGitInfo = true
 
 relativeURLs = false
-canonifyURLs = true
+canonifyURLs = false
 
 [build]
     noJSConfigInAssets = true
@@ -141,3 +141,7 @@ canonifyURLs = true
     name = "Configs"
     url = "/configs/"
     weight = 3
+
+[services]
+    [services.googleAnalytics]
+        id = 'G-64G6E64CHY'
