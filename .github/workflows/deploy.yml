@@ -54,9 +54,8 @@ jobs:
           HUGO_ENV: production
         run: hugo --gc --minify --destination ./public --baseURL "${{ steps.pages.outputs.base_url }}/"
 
-      - name: Debug: List public folder
+      - name: "Debug: List public folder"
         run: ls -la ./public
-        shell: bash
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
