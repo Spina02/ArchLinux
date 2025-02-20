@@ -1,6 +1,6 @@
 ---
 type: "docs"
-weight: 200
+weight: 300
 title: "Pre-Installation"
 icon: "download"
 description: "Essential pre-installation steps: verify system, create bootable media, and configure BIOS/UEFI for a smooth installation."

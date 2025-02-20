@@ -1,6 +1,6 @@
 ---
 type: "docs"
-weight: 300
+weight: 400
 title: "Installation"
 author: "Andrea Spinelli"
 icon: "downloading"

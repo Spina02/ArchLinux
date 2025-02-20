@@ -1,11 +1,11 @@
 ---
 type: "docs"
-weight: 100
+weight: 200
 title: "Roadmap"
 icon: "list"
 description: "The installation roadmap"
 date: "2025-02-19T12:00:00+00:00"
-BuildDate: "2025-02-19T12:00:00+00:00"
+lastmod: "2025-02-19T12:00:00+00:00"
 draft: false
 toc: true
 tags: ["Arch Linux", "Installation", "Guide"]

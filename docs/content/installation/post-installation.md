@@ -1,6 +1,6 @@
 ---
 type: "docs"
-weight: 500
+weight: 600
 title: "Post-Installation"
 author: "Andrea Spinelli"
 icon: "restart_alt"

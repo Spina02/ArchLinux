@@ -1,6 +1,6 @@
 ---
 type: "docs"
-weight: 400
+weight: 500
 title: "System Configuration"
 icon: "settings"
 description: "Step-by-step guide to system configuration during Arch Linux installation."
