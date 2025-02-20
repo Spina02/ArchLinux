@@ -61,8 +61,11 @@ jobs:
 
       - name: "Debug: List public folder after build"
         run: |
-          echo "Listing contents of ./public:"
+          echo "Listing contents of ./public (working directory 'docs'):"
           ls -la ./public
+          echo "Listing contents of docs/public from repository root:"
+          cd ..
+          ls -la docs/public
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
