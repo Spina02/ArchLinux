@@ -129,3 +129,6 @@ canonifyURLs = true
     url = "/"
     identifier = "/"
     weight = 10
+
+[permalinks]
+    docs = "/:slug/"

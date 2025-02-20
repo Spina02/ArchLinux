@@ -1,4 +1,5 @@
 ---
+url: /
 type : "docs"
 weight: 50
 title: "ArchLinux Personal Config & Documentation"
