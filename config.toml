@@ -126,9 +126,17 @@ canonifyURLs = true
 
 [[menu.primary]]
     name  = "Home"
-    url = "/"
-    identifier = "/"
-    weight = 10
+    url = "/docs/"
+    identifier = "home"
+    weight = 1
 
-# [permalinks]
-#     docs = "/:slug/"
+[[menu.primary]]
+    name  = "Installation"
+    url = "/docs/installation/"
+    identifier = "installation"
+    weight = 2
+
+[[menu.primary]]
+    name = "Configs"
+    url = "/docs/configs/"
+    weight = 3

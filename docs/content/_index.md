@@ -1,7 +1,7 @@
 ---
-url: /
+url: /home
 type : "docs"
-weight: 5
+weight: 4
 title: "Spina's Pages"
 icon: menu_book
 lead: ""

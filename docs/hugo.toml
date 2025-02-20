@@ -84,7 +84,7 @@ canonifyURLs = true
         # Link behaviour
         intLinkTooltip  = true          # Enable a tooltip for internal links that displays info about the destination? default false
         # extLinkNewTab   = false       # Open external links in a new Tab? default true
-        logoLinkURL     = "/"           # Set a custom URL destination for the top header logo link.
+        logoLinkURL     = "/docs"           # Set a custom URL destination for the top header logo link.
 
     [params.flexsearch] # Parameters for FlexSearch
         enabled             = true
@@ -127,17 +127,17 @@ canonifyURLs = true
 
 [[menu.primary]]
     name  = "Home"
-    url = "/"
+    url = "/docs/"
     identifier = "home"
     weight = 1
 
 [[menu.primary]]
     name  = "Installation"
-    url = "/installation/"
+    url = "/docs/installation/"
     identifier = "installation"
     weight = 2
 
 [[menu.primary]]
     name = "Configs"
-    url = "/configs/"
+    url = "/docs/configs/"
     weight = 3
