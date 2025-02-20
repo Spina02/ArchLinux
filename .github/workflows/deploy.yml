@@ -58,17 +58,18 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: hugo --gc --minify --destination ./public --baseURL "${{ steps.pages.outputs.base_url }}/"
-      
-      - name: "Debug: List public folder after build"
+
+      - name: Debug: List public folder after build
         run: |
           echo "Listing contents of ./public:"
           ls -la ./public
 
       - name: Upload build artifact
+        working-directory: docs
         uses: actions/upload-artifact@v4
         with:
           name: public
-          path: ./public
+          path: public
 
   deploy:
     runs-on: ubuntu-latest
@@ -78,10 +79,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Download build artifact
+        working-directory: docs
         uses: actions/download-artifact@v4
         with:
           name: public
-          path: ./public
+          path: public
 
       - name: Deploy to GitHub Pages
         id: deployment
