@@ -1,4 +1,5 @@
 ---
+url: /
 type : "docs"
 weight: 5
 title: "Spina's Pages"
