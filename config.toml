@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1313/"
+baseURL = "https://spina02.github.io/ArchLinux/"
 languageCode = "en-GB"
 title = "ArchLinux Personal Config & Documentation"
 theme = "lotusdocs"
@@ -8,7 +8,7 @@ contentDir = "content"
 enableEmoji = true
 enableGitInfo = true
 
-relativeURLs = true
+relativeURLs = false
 canonifyURLs = true
 
 [build]
@@ -92,7 +92,7 @@ canonifyURLs = true
         cache               = 100
         minQueryChar        = 3 # default is 0 (disabled)
         maxResult           = 5 # default is 5
-        searchSectionsIndex = []
+        searchSectionsIndex = ["/installation/", "/configs/", "/docs/"]
 
     # [params.docsearch] # Parameters for DocSearch
     #     appID     = ""            # Algolia Application ID (or set env variable HUGO_PARAM_DOCSEARCH_appID)
