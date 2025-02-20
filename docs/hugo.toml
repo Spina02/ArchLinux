@@ -127,17 +127,17 @@ canonifyURLs = true
 
 [[menu.primary]]
     name  = "Home"
-    url = "/docs/"
+    url = "ArchLinux/docs/"
     identifier = "home"
     weight = 1
 
 [[menu.primary]]
     name  = "Installation"
-    url = "/docs/installation/"
+    url = "ArchLinux/docs/installation/"
     identifier = "installation"
     weight = 2
 
 [[menu.primary]]
     name = "Configs"
-    url = "/docs/configs/"
+    url = "ArchLinux/docs/configs/"
     weight = 3
