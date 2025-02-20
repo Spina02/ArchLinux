@@ -69,7 +69,7 @@ jobs:
 
       # Invece di upload-artifact@v4, usiamo upload-pages-artifact@v1
       - name: "Upload Pages artifact"
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           # Poiché il working-directory è "docs", ./public = docs/public a livello repo
           path: ./public
