@@ -46,10 +46,13 @@ jobs:
       - name: Hugo mod tidy
         run: hugo mod tidy
 
+      # Azione consigliata da GitHub per inizializzare l'ambiente Pages
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
 
+      # Se hai un package.json puoi installare le dipendenze Node,
+      # altrimenti non serve
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
 
@@ -64,11 +67,12 @@ jobs:
           echo "Listing contents of ./public:"
           ls -la ./public
 
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v4
+      # Invece di upload-artifact@v4, usiamo upload-pages-artifact@v1
+      - name: "Upload Pages artifact"
+        uses: actions/upload-pages-artifact@v1
         with:
-          name: github-pages
-          path: docs/public
+          # Poiché il working-directory è "docs", ./public = docs/public a livello repo
+          path: ./public
 
   deploy:
     runs-on: ubuntu-latest
@@ -77,14 +81,17 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Download build artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: github-pages
-          path: docs/public
-
+      # Niente download manuale,
+      # deploy-pages@v2 recupererà l'artefatto ephemeral automaticamente.
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-        with:
-          artifact_name: github-pages
+
+      # Se prima scaricavi manualmente l'artefatto, ora NON serve più:
+      #
+      # - name: Download build artifact
+      #   uses: actions/download-artifact@v4
+      #   ...
+      #
+      # Togli anche eventuali parametri "artifact_name" 
+      # se non strettamente richiesti da deploy-pages.
