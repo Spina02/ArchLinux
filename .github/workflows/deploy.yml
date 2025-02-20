@@ -11,6 +11,10 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 defaults:
   run:
     working-directory: docs
@@ -60,12 +64,11 @@ jobs:
           echo "Listing contents of ./public:"
           ls -la ./public
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
         with:
-          path: docs/public
           name: github-pages
-          retention-days: 1
+          path: docs/public
 
   deploy:
     runs-on: ubuntu-latest
