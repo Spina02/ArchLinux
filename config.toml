@@ -100,7 +100,7 @@ canonifyURLs = false
     #     indexName = ""            # Index Name to perform search on (or set env variable HUGO_PARAM_DOCSEARCH_indexName)
 
     [params.feedback]
-        enabled = false
+        enabled = true
         emoticonTpl = true
         eventDest = ["plausible","google"]
         emoticonEventName = "Feedback"
