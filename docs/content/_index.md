@@ -1,6 +1,6 @@
 ---
 type : "docs"
-weight: 50
+weight: 5
 title: "ArchLinux Personal Config & Documentation"
 icon: menu_book
 lead: ""
