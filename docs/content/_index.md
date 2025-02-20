@@ -1,5 +1,5 @@
 ---
-url: /home
+url: ArchLinux
 type : "docs"
 weight: 4
 title: "Spina's Pages"

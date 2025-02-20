@@ -8,7 +8,7 @@ contentDir = "content"
 enableEmoji = true
 enableGitInfo = true
 
-relativeURLs = false
+relativeURLs = true
 canonifyURLs = true
 
 [build]
@@ -126,17 +126,17 @@ canonifyURLs = true
 
 [[menu.primary]]
     name  = "Home"
-    url = "/docs/"
+    url = "/"
     identifier = "home"
     weight = 1
 
 [[menu.primary]]
     name  = "Installation"
-    url = "/docs/installation/"
+    url = "/installation/"
     identifier = "installation"
     weight = 2
 
 [[menu.primary]]
     name = "Configs"
-    url = "/docs/configs/"
+    url = "/configs/"
     weight = 3
