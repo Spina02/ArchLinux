@@ -86,7 +86,7 @@ canonifyURLs = true
         logoLinkURL     = "/"           # Set a custom URL destination for the top header logo link.
 
     [params.flexsearch] # Parameters for FlexSearch
-        start_url           = "/"
+        start_url           = "/docs/"
         enabled             = true
         tokenize            = "full"
         optimize            = true
