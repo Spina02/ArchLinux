@@ -132,3 +132,6 @@ canonifyURLs = true
 
 [permalinks]
     docs = "/:slug/"
+
+[index]
+    enable = true
