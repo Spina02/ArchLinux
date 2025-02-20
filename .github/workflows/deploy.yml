@@ -61,16 +61,13 @@ jobs:
 
       - name: "Debug: List public folder after build"
         run: |
-          echo "Listing contents of ./public (working directory 'docs'):"
+          echo "Listing contents of ./public:"
           ls -la ./public
-          echo "Listing contents of docs/public from repository root:"
-          cd ..
-          ls -la docs/public
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
-          name: public
+          name: github-pages
           path: docs/public
 
   deploy:
@@ -83,13 +80,11 @@ jobs:
       - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
-          name: public
+          name: github-pages
           path: docs/public
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
         with:
-          artifact_name: public
-          token: ${{ secrets.GITHUB_TOKEN }}
-  
+          artifact_name: github-pages
