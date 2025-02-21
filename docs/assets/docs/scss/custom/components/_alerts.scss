@@ -268,10 +268,3 @@
 .alert-tip .alert-link {
     color: #a37a00;
 }
-
-// Adjust alert wrapper when inside list items to inherit proper indentation
-li > .alert-wrapper {
-    margin-left: 0;        // Remove any extra margin on the left
-    padding-left: inherit; // Inherit the parent's left padding (bullet indentation)
-}
-  
