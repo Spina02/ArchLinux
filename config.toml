@@ -11,6 +11,10 @@ enableGitInfo = true
 relativeURLs = false
 canonifyURLs = false
 
+# [services]
+#     [services.googleAnalytics]
+#         id = 'G-64G6E64CHY'
+
 [build]
     noJSConfigInAssets = true
 
@@ -19,8 +23,6 @@ canonifyURLs = false
     [[module.imports]]
         path = "github.com/colinwilson/lotusdocs"
         disable = false
-
-
 
 [markup]
     [markup.tableOfContents]
@@ -95,14 +97,14 @@ canonifyURLs = false
         searchSectionsIndex = ["/installation/", "/configs/", "/docs/"]
 
     # [params.docsearch] # Parameters for DocSearch
-    #     appID     = ""            # Algolia Application ID (or set env variable HUGO_PARAM_DOCSEARCH_appID)
-    #     apiKey    = ""            # Algolia Search-Only API (Public) Key (or set env variable HUGO_PARAM_DOCSEARCH_apiKey)
-    #     indexName = ""            # Index Name to perform search on (or set env variable HUGO_PARAM_DOCSEARCH_indexName)
+    #     appID     = "LRQSTPVJ0K"                       # Algolia Application ID (or set env variable HUGO_PARAM_DOCSEARCH_appID)
+    #     apiKey    = "8aa33482932e6e42c346789018b66d4f" # Algolia Search-Only API (Public) Key (or set env variable HUGO_PARAM_DOCSEARCH_apiKey)
+    #     indexName = "spina02io"                        # Index Name to perform search on (or set env variable HUGO_PARAM_DOCSEARCH_indexName)
 
     [params.feedback]
         enabled = false
         emoticonTpl = true
-        eventDest = ["plausible","google"]
+        eventDest = ["google"]
         emoticonEventName = "Feedback"
         positiveEventName = "Positive Feedback"
         negativeEventName = "Negative Feedback"
@@ -141,7 +143,3 @@ canonifyURLs = false
     url = "/configs/"
     identifier = "configs"
     weight = 3
-
-[services]
-    [services.googleAnalytics]
-        id = 'G-64G6E64CHY'
