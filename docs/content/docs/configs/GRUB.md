@@ -109,9 +109,9 @@ If this does not work, then we have to add Windows manually.
     ```
 
 
-    {{% alert context = danger %}}
-    **Be careful** when working with grub: If you mispell something you could incurr to boot issues
-    {{% /alert %}}
+{{% alert context = danger %}}
+**Be careful** when working with grub: If you mispell something you could incurr to boot issues
+{{% /alert %}}
 
 
     
@@ -120,11 +120,5 @@ If this does not work, then we have to add Windows manually.
 
 {{% alert context="tip" %}}
 There are many repositories where you can find a lot of themes of all types. Here I found a well-structured repo:
-
-<div align="center">
-
 [GitHub - Gorgeous-GRUB](https://github.com/jacksaur/Gorgeous-GRUB)
-
-</div>
-
 {{% /alert %}}
