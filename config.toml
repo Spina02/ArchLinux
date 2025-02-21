@@ -9,7 +9,7 @@ enableEmoji = true
 enableGitInfo = true
 
 relativeURLs = true
-canonifyURLs = true
+canonifyURLs = false
 
 [services]
     [services.googleAnalytics]
