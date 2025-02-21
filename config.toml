@@ -11,8 +11,6 @@ enableGitInfo = true
 relativeURLs = true
 canonifyURLs = false
 
-# googleAnalytics = "G-64G6E64CHY"
-
 [services]
     [services.googleAnalytics]
         id = 'G-64G6E64CHY'
