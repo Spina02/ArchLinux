@@ -142,6 +142,6 @@ canonifyURLs = false
     identifier = "configs"
     weight = 3
     
-# [services]
-#     [services.googleAnalytics]
-#         id = 'G-64G6E64CHY'
+[services]
+    [services.googleAnalytics]
+        id = 'G-64G6E64CHY'
