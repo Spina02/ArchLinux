@@ -16,7 +16,7 @@ tags: ["Asus", "Components", "Specs"]
 
 This page details the hardware specifications of my Asus A15 FA507NV. I am sharing these details to clarify the context of my configurations, as ***many settings and tweaks are tailored specifically for the hardware*** I’m working with. Knowing the exact components helps understand the choices made during the installation and configuration process.
 
-{{< table "table-striped table-hover" >}}
+{{% table "table-striped table-hover" %}}
 | Component     | Specification                            |
 |---------------|------------------------------------------|
 | Processor     | Ryzen 7 7735HS with iGPU                 |
@@ -24,4 +24,4 @@ This page details the hardware specifications of my Asus A15 FA507NV. I am shari
 | Memory        | 16GB DDR5 4800MHz                        |
 | Storage (1)   | native SSD NVMe 500GB (for Windows)      |
 | Storage (2)   | SSD NVMe Samsung 990 Pro 1TB (for Linux) |
-{{< /table >}}
+{{% /table %}}

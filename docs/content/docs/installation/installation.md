@@ -102,13 +102,13 @@ Alternatively, you can opt for **swapfiles**. This method offers greater flexibi
 
 **Typical partition setup:**
 
-{{< table >}}
+{{% table %}}
 | Mount Point | Partition                 | Partition Type                  | Suggested Size                                     |
 |-------------|---------------------------|---------------------------------|----------------------------------------------------|
 | `/boot`     | `/dev/efi_system_partition` | EFI system partition          | 1 GiB                                              |
 | `[SWAP]`    | `/dev/swap_partition`       | Linux swap                    | At least 4 GiB                                     |
 | `/`         | `/dev/root_partition`       | Linux x86-64 root (/)         | Remainder of the device. At least 32 GiB           |
-{{< /table >}}
+{{% /table %}}
     
 <br>
 

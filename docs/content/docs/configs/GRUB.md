@@ -38,7 +38,7 @@ cat /boot/grub/grub.cfg
 
 #### Add Windows Entry (only if you created a new EFI partition)
 
-If you created a new EFI partition in [pre-Installation]({{< ref "docs/installation/pre-installation.md" >}}) phase, you will probably need to add windows manually. Before doing this we can try to make GRUB detect other operating systems if the tool os-prober is installed and enabled:
+If you created a new EFI partition in [pre-Installation]({{% ref "docs/installation/pre-installation.md" %}}) phase, you will probably need to add windows manually. Before doing this we can try to make GRUB detect other operating systems if the tool os-prober is installed and enabled:
 
 ```shell
 paru -S os-prober # or use `sudo pacman`
