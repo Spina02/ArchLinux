@@ -215,6 +215,7 @@ $btn-link-hover-color:        var(--#{$prefix}link-hover-color);
     --cardinal: var(--cardinal-500);
     --magenta: var(--magenta-500);
     --emerald: var(--emerald-500);
+    --purple: var(--purple-500);
 
     --secondary: var(--gray-600);
     --success: var(--green);
@@ -290,8 +291,8 @@ $btn-link-hover-color:        var(--#{$prefix}link-hover-color);
     // Footer
     --footer: #202942;
     --footer-bg: var(--white);
-    --foot-social-color: #adb5bd;
-    --social-border-color: #adb5bd;
+    --foot-social-color: #2565fa;
+    --social-border-color: #2683df;
     --foot-social-color-white: var(--white);
 
     // lightness variables
