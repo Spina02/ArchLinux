@@ -109,12 +109,9 @@ If this does not work, then we have to add Windows manually.
     ```
 
 
-{{% alert context = danger %}}
+{{% alert context = "danger" %}}
 **Be careful** when working with grub: If you mispell something you could incurr to boot issues
 {{% /alert %}}
-
-
-    
 
 #### Customize GRUB - [WIP]
 
