@@ -11,10 +11,6 @@ enableGitInfo = true
 relativeURLs = false
 canonifyURLs = false
 
-[services]
-    [services.googleAnalytics]
-        id = 'G-64G6E64CHY'
-
 [build]
     noJSConfigInAssets = true
 
@@ -34,6 +30,10 @@ canonifyURLs = false
     [markup.goldmark.parser]
         [markup.goldmark.parser.attribute]
         block = true
+
+# [services]
+#     [services.googleAnalytics]
+#         id = 'G-64G6E64CHY'
 
 [params]
 
