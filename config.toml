@@ -102,7 +102,7 @@ canonifyURLs = false
         indexName = "spina02io"                        # Index Name to perform search on (or set env variable HUGO_PARAM_DOCSEARCH_indexName)
 
     [params.feedback]
-        enabled = true
+        enabled = false
         emoticonTpl = true
         eventDest = ["google"]
         emoticonEventName = "Feedback"
