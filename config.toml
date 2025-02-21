@@ -96,10 +96,10 @@ canonifyURLs = false
         maxResult           = 5 # default is 5
         searchSectionsIndex = ["/installation/", "/configs/", "/docs/"]
 
-    # [params.docsearch] # Parameters for DocSearch
-    #     appID     = "LRQSTPVJ0K"                       # Algolia Application ID (or set env variable HUGO_PARAM_DOCSEARCH_appID)
-    #     apiKey    = "8aa33482932e6e42c346789018b66d4f" # Algolia Search-Only API (Public) Key (or set env variable HUGO_PARAM_DOCSEARCH_apiKey)
-    #     indexName = "spina02io"                        # Index Name to perform search on (or set env variable HUGO_PARAM_DOCSEARCH_indexName)
+    [params.docsearch] # Parameters for DocSearch
+        appID     = "LRQSTPVJ0K"                       # Algolia Application ID (or set env variable HUGO_PARAM_DOCSEARCH_appID)
+        apiKey    = "8aa33482932e6e42c346789018b66d4f" # Algolia Search-Only API (Public) Key (or set env variable HUGO_PARAM_DOCSEARCH_apiKey)
+        indexName = "spina02io"                        # Index Name to perform search on (or set env variable HUGO_PARAM_DOCSEARCH_indexName)
 
     [params.feedback]
         enabled = false
