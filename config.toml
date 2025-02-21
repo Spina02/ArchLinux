@@ -64,6 +64,7 @@ canonifyURLs = false
         scrollSpy       = true          # enable scrollspy on ToC? default is true
 
         prism           = true          # enable syntax highlighting via Prism
+        prismTheme      = "lucario"
 
         # icons
         sidebarIcons    = true          # enable sidebar icons? default false
