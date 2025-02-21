@@ -16,7 +16,7 @@ canonifyURLs = false
         id = 'G-64G6E64CHY'
 
 [build]
-    noJSConfigInAssets = true
+    noJSConfigInAssets = false
 
 [module]
     replacements = "github.com/colinwilson/lotusdocs -> themes/lotusdocs"
