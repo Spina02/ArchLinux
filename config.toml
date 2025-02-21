@@ -11,12 +11,12 @@ enableGitInfo = true
 relativeURLs = false
 canonifyURLs = false
 
-[services]
-    [services.googleAnalytics]
-        id = 'G-64G6E64CHY'
+# [services]
+#     [services.googleAnalytics]
+#         id = 'G-64G6E64CHY'
 
 [build]
-    noJSConfigInAssets = false
+    noJSConfigInAssets = true
 
 [module]
     replacements = "github.com/colinwilson/lotusdocs -> themes/lotusdocs"
