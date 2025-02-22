@@ -1,4 +1,4 @@
-baseURL = "https://spina02.github.io/ArchLinux/docs/"
+baseURL = "https://spina02.github.io/ArchLinux/"
 languageCode = "en-GB"
 title = "Arch Linux Personal Config & Documentation"
 theme = "lotusdocs"
