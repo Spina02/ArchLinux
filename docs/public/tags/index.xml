@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on ArchLinux Personal Config &amp; Documentation</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on ArchLinux Personal Config &amp; Documentation</description>
+    <generator>Hugo</generator>
+    <language>en-GB</language>
+    <lastBuildDate>Sat, 22 Feb 2025 01:10:28 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arch Linux</title>
+      <link>http://localhost:1313/tags/arch-linux/</link>
+      <pubDate>Wed, 19 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/arch-linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Asus</title>
+      <link>http://localhost:1313/tags/asus/</link>
+      <pubDate>Wed, 19 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/asus/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Components</title>
+      <link>http://localhost:1313/tags/components/</link>
+      <pubDate>Wed, 19 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/components/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Config</title>
+      <link>http://localhost:1313/tags/config/</link>
+      <pubDate>Wed, 19 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/config/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Configuration</title>
+      <link>http://localhost:1313/tags/configuration/</link>
+      <pubDate>Wed, 19 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/configuration/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GRUB</title>
+      <link>http://localhost:1313/tags/grub/</link>
+      <pubDate>Wed, 19 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/grub/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Guide</title>
+      <link>http://localhost:1313/tags/guide/</link>
+      <pubDate>Wed, 19 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/guide/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Installation</title>
+      <link>http://localhost:1313/tags/installation/</link>
+      <pubDate>Wed, 19 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/installation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Specs</title>
+      <link>http://localhost:1313/tags/specs/</link>
+      <pubDate>Wed, 19 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/specs/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
