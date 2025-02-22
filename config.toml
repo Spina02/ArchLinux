@@ -8,7 +8,7 @@ contentDir = "content"
 enableEmoji = true
 enableGitInfo = true
 
-relativeURLs = true
+relativeURLs = false
 canonifyURLs = false
 
 [services]
