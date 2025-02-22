@@ -1,4 +1,4 @@
-baseURL = "https://spina02.github.io/ArchLinux/"
+baseURL = "https://spina02.github.io/ArchLinux/docs/"
 languageCode = "en-GB"
 title = "Arch Linux Personal Config & Documentation"
 theme = "lotusdocs"
@@ -68,7 +68,6 @@ canonifyURLs = false
         editPage        = true                                # enable 'Edit this page' feature - default false
         lastMod         = true                                # enable 'Last modified' date on pages - default false
         lastModRelative = true                                # format 'Last modified' time as relative - default true
-
 
         # ToC
         toc             = true          # enable table of contents? default is true
