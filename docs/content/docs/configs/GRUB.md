@@ -19,7 +19,7 @@ This page is still under development. Check back later for more details!
 
 {{% /alert %}}
 
-#### GRUB Installation
+### GRUB Installation
 
 Firstly, let's check if we have already installed GRUB:
 
@@ -53,7 +53,8 @@ cat /boot/grub/grub.cfg | grep windows
 
 If this does not work, then we have to add Windows manually.
 
-1. **Identify the Windows EFI Partition**: 
+1. **Identify the Windows EFI Partition**
+
     Firstly we have to identify which one is the Windows EFI Partition and note its UUID. To do that you can simply use:
 
     ```shell
@@ -64,7 +65,7 @@ If this does not work, then we have to add Windows manually.
 
     Note its UUID (a string like `XXXX-XXXX`).
 
-2. **Edit the GRUB Custom file**:
+2. **Edit the GRUB Custom file**
 
     Let's open now the GRUB Custom file with root privileges:
 
@@ -83,7 +84,7 @@ If this does not work, then we have to add Windows manually.
     }
     ```
 
-3. Reorder the Entries (Optional)
+3. **Reorder the Entries (Optional)**
     
     The order of the GRUB entries depends on the name of the files in `/etc/grub.d/` folder. 
     
@@ -101,7 +102,26 @@ If this does not work, then we have to add Windows manually.
     rename /etc/grub.d/40_custom /etc/grub.d/25_windows /etc/grub.d/40_custom
     ```
 
-4. Regenerate the GRUB Configuration file and Reboot
+4. **Timeout and Default boot option**
+
+    We can define a timeout before GRUB automatically boots from the default option. To do that we shell modify the `/etc/default/grub` file:
+
+    ```shell
+    sudo nano /etc/default/grub 
+    ```
+
+    and modify the following variables:
+
+    ```shell
+    GRUB_DEFAULT=saved      # default entry is the last selection
+    GRUB_TIMEOUT=5          # 5 second timeout
+    # ...
+    GRUB_SAVEDEFAULT=true   # needed to make GRUB remember the last option
+    ```
+
+5. **Regenerate the GRUB Configuration file and Reboot**
+
+    Now, let's generate the GRUB configuration file and then reboot to see if everything works as expected:
 
     ```
     sudo grub-mkconfig -o /boot/grub/grub.cfg
@@ -113,6 +133,8 @@ If this does not work, then we have to add Windows manually.
 {{% /alert %}}
 
 #### Customize GRUB - [WIP]
+
+To customize GRUB we can create a theme from zero or use an existing one
 
 {{% alert context="success" %}}
 There are many repositories where you can find a lot of themes of all types. Here I found a well-structured repo:
