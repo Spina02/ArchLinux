@@ -63,6 +63,8 @@ categories: [""]
    - `neofetch`: A tool that displays system information in a visually appealing way.  
    - `bluez`: The official Bluetooth protocol stack for Linux, enabling Bluetooth functionality.
 
+   <div style="margin-bottom: 2rem;"></div>
+
 4. **Enable Command History Search**
 
    Enhance your terminal experience by enabling command history search.
