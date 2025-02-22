@@ -29,13 +29,13 @@ Use tools such as [Balena Etcher](https://etcher.balena.io/), [Ventoy](https://w
 
 Download checksum file from [this page](https://archlinux.org/download/#checksums) and use [gpg](https://wiki.archlinux.org/title/GnuPG#Verify_a_signature) to verify the signature.
 
-```bash
+```shell
 gpg --keyserver-options auto-key-retrieve --verify archlinux-version-x86_64.iso.sig
 ```
 
 Alternatively, **from an existing Arch Linux installation** run:
 
-```bash
+```shell
 pacman-key -v archlinux-version-x86_64.iso.sig
 ```
 {{% /alert %}}

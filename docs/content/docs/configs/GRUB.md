@@ -76,7 +76,7 @@ If this does not work, then we have to add Windows manually.
     At the end of the file, add a new menu entry for Windows (make sure to replace `XXXX-XXXX` with the right UID):
 
     ```shell
-    menuentry "Windows 10" {
+    menuentry "Windows 10" --class windows {
         insmod part_gpt
         insmod fat
         search --fs-uuid --no-floppy --set=root XXXX-XXXX
@@ -123,7 +123,7 @@ If this does not work, then we have to add Windows manually.
 
     Now, let's generate the GRUB configuration file and then reboot to see if everything works as expected:
 
-    ```
+    ```shell
     sudo grub-mkconfig -o /boot/grub/grub.cfg
     reboot
     ```
@@ -132,11 +132,43 @@ If this does not work, then we have to add Windows manually.
 **Be careful** when working with grub: If you mispell something you could incurr to boot issues
 {{% /alert %}}
 
-#### Customize GRUB - [WIP]
+#### Set GRUB Theme
 
-To customize GRUB we can create a theme from zero or use an existing one
+To customize GRUB we can create a theme from zero or use an existing one. There are many repositories where you can find a lot of themes of all types. Here I found a well-structured repo:
 
-{{% alert context="success" %}}
-There are many repositories where you can find a lot of themes of all types. Here I found a well-structured repo:
+<div align="center">
+
 [GitHub - Gorgeous-GRUB](https://github.com/jacksaur/Gorgeous-GRUB)
+
+</div>
+
+{{% alert context="mycase" %}}
+I personally choose the [**Arcade**](https://github.com/nobreDaniel/dotfile) theme, this is the result:
+
+![GRUB theme screenshot](/docs/assets/images/grub.jpeg)
+
 {{% /alert %}}
+
+To use a theme just clone the theme repository:
+```shell
+git clone url/to/theme
+``` 
+
+Some themes are stored in folders of a larger repo. Find the theme directory and copy it in `/boot/grub/themes` (you will need root priviledges):
+
+```shell
+sudo cp -r path/to/theme /boot/grub/themes/THEME_NAME
+```
+
+Then, inside `/etc/default/grub` let's se the `GRUB_THEME`:
+```shell
+GRUB_THEME=/boot/grub/themes/THEME_NAMEtheme.txt
+```
+
+Save and exit. Then, once again, let's regenerate the GRUB configuration file and then reboot:
+
+```shell
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+reboot
+```
+

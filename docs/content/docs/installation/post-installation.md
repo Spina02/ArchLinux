@@ -16,7 +16,7 @@ categories: [""]
 ### Reboot and Post Installation
 
  #### Exit Chroot and Unmount Filesystems
-   ```bash
+   ```shell
    exit           # exits chroot
    umount -R /mnt # not mandatory but 
    ```
@@ -30,23 +30,29 @@ categories: [""]
 ##### Post Installation Tasks
 
    After rebooting and logging in, it's time to fine-tune your system configurations by enabling and starting essential services.
-   
-   First, ensure that the network connection remains stable by enabling the network management tool you configured earlier.
-   
-   For example, if you opted for NetworkManager, run:
 
-   ```bash
+   First, ensure that the network connection remains stable by enabling the NetworkManager service you configured earlier:
+
+   ```shell
    systemctl enable NetworkManager
    ```
 
    Once your connection is confirmed, update your package mirrors and upgrade the system by executing:
 
-   ```bash
+   ```shell
    sudo pacman -Syyu
    ```
 
-   Next, install some useful packages that you may need for further customization, such as Git, development tools, Python:
+   Next, install some useful packages for further customization:
 
-   ```bash
+   ```shell
    sudo pacman -S git base-devel python bat htop neofetch bluez
    ```
+
+   - `git`: A distributed version control system to track changes in your projects.  
+   - `base-devel`: A group of essential build tools (like gcc, make, etc.) for compiling software.  
+   - `python`: A versatile high-level programming language for scripting and development.  
+   - `bat`: A modern replacement for cat with syntax highlighting and Git integration.  
+   - `htop`: An interactive process viewer to monitor system performance in real time.  
+   - `neofetch`: A tool that displays system information in a visually appealing way.  
+   - `bluez`: The official Bluetooth protocol stack for Linux, enabling Bluetooth functionality.

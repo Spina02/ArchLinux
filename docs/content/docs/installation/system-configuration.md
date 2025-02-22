@@ -16,7 +16,7 @@ categories: [""]
 
 #### Generate the Filesystem Table (fstab)
    After installing the base system, generate the filesystem table by running:
-   ```bash
+   ```shell
    genfstab -U /mnt >> /mnt/etc/fstab
    ```
    It's important to review the generated `/mnt/etc/fstab` file to ensure that all partitions are correctly listed and configured.
@@ -24,7 +24,7 @@ categories: [""]
 #### Chroot into the New System
 
    Finally, change root into your new system environment to continue with further configuration:
-   ```bash
+   ```shell
    arch-chroot /mnt
    ```
 
@@ -33,7 +33,7 @@ categories: [""]
    
    If you need to **set your timezone manually** you can do so by creating a symlink:
 
-   ```bash
+   ```shell
    ln -sf /usr/share/zoneinfo/Your/Timezone /etc/localtime 
    hwclock --systohc
    ```
@@ -41,27 +41,27 @@ categories: [""]
    Edit then `/etc/locale.gen` (e.g. using `nano`) and uncomment your locale settings (e.g. `en_US.UTF-8 UTF-8`).
 
    Generate the locales by running: 
-   ```bash
+   ```shell
    locale-gen
    ```
    Now create `/etc/locale.conf` and set the `LANG` variable.
    You can do this in a single command as the following:
      
-   ```bash
+   ```shell
    echo LANG=en_US.UTF-8 > /etc/locale.conf
    ```
    *(Replace `en_US.UTF-8` with your preferred locale settings)*
 
    If you set a keyboard layout, make the changes persistent in `vconsole.conf`. The following example sets the `de-latin1` keymap:
 
-   ```bash
+   ```shell
    echo KEYMAP=de-latin1 > /etc/vconsole.conf
    ```
 
 #### Network Configuration
    
    Create an hostname:
-   ```bash
+   ```shell
    echo <your_hostname> > /etc/hostname
    ```
 
@@ -72,40 +72,40 @@ categories: [""]
      127.0.1.1   <your_hostname>.localdomain <your_hostname>
      ```
    Install and configure a network manager such as [NetworkManager](https://wiki.archlinux.org/title/NetworkManager):
-   ```bash
+   ```shell
    pacman -S networkmanager
    ```
    Enable with:
-   ```bash
+   ```shell
    systemctl enable NetworkManager
    ```
    And connect with:
-   ```bash
+   ```shell
    nmcli device wifi connect <your_SSID_or_BSSID> password <your_password>
    ```
 
 #### Root Password and User Creation
 
    Set now the **root password**
-   ```bash
+   ```shell
    passwd
    ```
    Create a **regular user**:
 
    - First, install `sudo` (if not already installed)
-      ```bash
+      ```shell
       pacman -S sudo
       ```
    - Then create the user with:
-      ```bash
+      ```shell
       useradd -m -G wheel -s /bin/bash <your_username>
       ```
    - Set password
-      ```bash
+      ```shell
       passwd <your_username>
       ```
    - Edit `/etc/sudoers` (using `visudo`) and enable wheel group privileges. Find the commented line `# %wheel ALL=(ALL) ALL` and remove `#` at the beginning of the line:
-      ```bash
+      ```shell
       EDITOR=nano visudo
       ```
 
@@ -113,19 +113,19 @@ categories: [""]
 
    Install a bootloader like `systemd-boot` or `GRUB`:
    - For **systemd-boot**:
-      ```bash
+      ```shell
       bootctl install
       ```
       Create an entry in `/boot/loader/entries/arch.conf` with the necessary options.
    - For **GRUB**:
-      ```bash
+      ```shell
       pacman -S grub efibootmgr
       ```
       Install:
-      ```bash
+      ```shell
       grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
       ```
       Generate config:
-      ```bash
+      ```shell
       grub-mkconfig -o /boot/grub/grub.cfg
       ```

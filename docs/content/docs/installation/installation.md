@@ -22,17 +22,20 @@ Boot from the USB drive and confirm you are in UEFI mode by checking for the pre
 #### Set Up the Keyboard Layout (if needed)
    
 You can list all available keymaps using:
-```
+
+```shell
 localectl list-keymaps
 ```
 Then set your preferred keymap:
-```bash
+
+```shell
 loadkeys us
 ```
 *(replace `us` with your chosen layout)*
 
 Additionally, you can change the console font with:
-```bash
+
+```shell
 setfont <font_name>
 ```
 fonts are located in `/usr/share/kbd/consolefonts/`.
@@ -41,7 +44,8 @@ fonts are located in `/usr/share/kbd/consolefonts/`.
 #### Connect to the internet
 
 make sure the network interface is unblocked using [rfkill](https://wiki.archlinux.org/title/Rfkill):
-```bash
+
+```shell
 rfkill
 ```
 
@@ -52,7 +56,7 @@ Then connect to the network:
 
 The connection may be verified with [ping](https://wiki.archlinux.org/title/Ping)
 
-```bash
+```shell
 ping archlinux.org
 ```
 
@@ -73,7 +77,7 @@ timedatectl
 
 To **enable Network Time Protocol** (NTP) synchronization, type:
 
-```bash
+```shell
 timedatectl set-ntp true
 ```
 
@@ -83,14 +87,14 @@ It's time to set up disk partitions. We can do this using tools like [fdisk](htt
 
 Firstly, identify your target disk (e.g., `/dev/nvme0n1`). 
 
-```bash
+```shell
 lsblk
 ```
 
 Then use `fdisk` (or any other partition manager) to create partitions (EFI, root, swap, etc.).
 
-{{% alert icon="💡" context="warning" %}}
-**Tip: Planning Your Partition Scheme**
+{{% alert context="tip" %}}
+**Planning Your Partition Scheme**
 
 Take time to plan a long-term partitioning scheme to avoid risky and complicated conversion or re-partitioning procedures in the future.
 {{% /alert %}}
@@ -112,12 +116,12 @@ Alternatively, you can opt for **swapfiles**. This method offers greater flexibi
     
 <br>
 
-{{% alert icon="🔎" context="success" %}}
+{{% alert context="mycase" %}}
 **Personal Configuration**
 
 In my personal configuration I decided to create a new boot partition as the one existing in windows was quite small (~256MB). Moreover I created a 24GB swap partition to enable the hibernation later.
     
-```bash
+```shell
 $ lsblk
 NAME          MAJ:MIN  RM    SIZE  RO TYPE MOUNTPOINTS
 nvme0n1       259:0    0   931.5G  0  disk 
@@ -138,16 +142,16 @@ Only format the EFI system partition if you created it during the partitioning s
 {{% /alert %}}
 
 Format the EFI partition by executing:
-```bash
+```shell
 mkfs.fat -F32 /dev/efi_system_partition
 ```
 
 Format your root partition with:
-```bash
+```shell
 mkfs.ext4 /dev/root_partition
 ```
 If you wish to enable swap, prepare the designated swap partition by running:
-```bash
+```shell
 mkswap /dev/swap_partition
 swapon /dev/swap_partition
 ``` 
@@ -155,11 +159,11 @@ swapon /dev/swap_partition
 #### Mount the Filesystems
 
 Begin by mounting the root partition to `/mnt` using:
-```bash
+```shell
 mount /dev/root_partition /mnt
 ```
 Then, create the EFI directory and mount the EFI partition to it with the following commands:
-```bash
+```shell
 mount --mkdir /dev/efi_system_partition /mnt/boot
 ```
 *Another typical directory locations is `/mnt/boot/efi`*
@@ -168,31 +172,31 @@ mount --mkdir /dev/efi_system_partition /mnt/boot
 
 Before installing the system it's recommended to update mirrors using tools as [reflector](https://wiki.archlinux.org/title/Reflector). For example, the following command finds and updates the top 10 best-rated mirrors based on speed and reliability:
 
-```bash
+```shell
 sudo reflector --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 ```
 
 Now you can install the base system, the Linux kernel, and the necessary firmware.
 
-```bash
+```shell
 pacstrap -K /mnt base linux linux-firmware
 ```
 
-{{% alert context="success" %}}
+{{% alert context="tip" %}}
 You may add other essential packages such as network tools or your preferred text editor, based on your needs.
 {{% /alert %}}
 
    A more complete command is the following one:
-   ```bash
+   ```shell
    pacstrap -K /mnt base linux linux-firmware nano networkmanager man-db man-pages texinfo
    ```
    Consider also adding cpu [microcode](https://wiki.archlinux.org/title/Microcode) updates using `amd-ucode` or `intel-ucode`
 
-{{% alert context="success" %}}
+{{% alert context="tip" %}}
 For managing AUR packages, consider installing an AUR helper like `yay` or `paru`. I personally prefer `paru` because of its useful features.
 
 If you'd like to install `paru` use the following commands:
-```bash
+```shell
 sudo pacman -S --needed base-devel git # if not already installed
 git clone https://aur.archlinux.org/paru.git
 cd paru
