@@ -30,18 +30,21 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
-      - name: Print working directory before build
+      - name: Print working directory
         run: |
           echo "Current directory: $(pwd)"
           ls -la
+        working-directory: docs
 
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+        working-directory: docs
 
       - name: Hugo mod tidy
         run: hugo mod tidy
+        working-directory: docs
 
       - name: Setup Pages
         id: pages
@@ -55,6 +58,7 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: hugo --gc --destination ./public --baseURL "${{ steps.pages.outputs.base_url }}/"
+        working-directory: docs
 
       - name: "Debug: List public folder after build"
         run: |
