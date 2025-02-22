@@ -53,7 +53,7 @@ jobs:
         env:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
-        run: hugo --gc --minify --destination ./public --baseURL "${{ steps.pages.outputs.base_url }}/"
+        run: hugo --gc --destination ./public --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: "Debug: List public folder after build"
         run: |
