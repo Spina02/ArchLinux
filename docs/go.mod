@@ -1,4 +1,4 @@
-module github.com/Spina02/ArchLinux
+module github.com/Spina02/ArchLinux/docs
 
 go 1.24.0
 
