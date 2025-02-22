@@ -1,7 +1,7 @@
 ---
 type : "docs"
 weight : 100
-title : "Archlinux Installation"
+title : "Arch Linux Installation"
 icon : "download"
 lead : ""
 description : "A comprehensive guide detailing the steps for installing Arch Linuhx. This document covers everything ofrom preparation and partitioning to system configuration till basic post-installration tasks."
