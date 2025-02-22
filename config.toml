@@ -63,7 +63,7 @@ canonifyURLs = false
         themeColor = "purple"
 
         # gitinfo
-        repoURL         = "https://github.com/Spina02/ArchLinux/"  # Git repository URL for your site [support for GitHub, GitLab, and BitBucket]
+        repoURL         = "https://github.com/Spina02/ArchLinux"  # Git repository URL for your site [support for GitHub, GitLab, and BitBucket]
         repoBranch      = "main/docs"                           # Name of your Git repository branch
         editPage        = true                                # enable 'Edit this page' feature - default false
         lastMod         = true                                # enable 'Last modified' date on pages - default false
