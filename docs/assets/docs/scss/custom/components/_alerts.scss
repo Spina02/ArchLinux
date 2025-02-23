@@ -291,3 +291,11 @@
     display: none;
 }
 
+.custom-figure img {
+    max-width: 60% !important;
+    height: auto !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-radius: 10px !important;
+}

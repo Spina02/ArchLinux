@@ -145,9 +145,7 @@ To customize GRUB we can create a theme from zero or use an existing one. There 
 {{% alert context="mycase" %}}
 I personally choose the [**Arcade**](https://github.com/nobreDaniel/dotfile) theme, this is the result:
 
-<img src="/assets/images/grub.jpeg" alt="GRUB theme screenshot" style="display: block; margin: 0 auto; max-width: 60%; height: auto; border-radius: 10px;" />
-
-<br>
+{{< figure src="images/grub.jpeg" alt="GRUB theme screenshot" class="custom-figure" >}}
 
 I also disabled submenus setting `GRUB_DISABLE_SUBMENU=true` in `/etc/default/grub` and modified `/etc/grub.d/10_linux` to rename the entries, but this is not recommended.
 
